@@ -1,7 +1,7 @@
 # FileOrganizer
 
 **Summary**
-- Files from user-provided paths are collected are stored in a database along with thier attributes (file size, date created, type)
+- Files from user-provided paths are collected and stored in a database along with thier attributes (file size, date created, type)
 - User needs to give directory to where to create the new directories
 - Create new directories for each file type and organizes the files in the directories accordingly.
 - Provide analysis : for each category, give the avg size of storage used, give how many items
