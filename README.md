@@ -17,6 +17,31 @@ Management of Documents:
 - Sort files in user-provided directory by time
 - command line argument to copy or move the files
 
-  Better to first put all info in databse as is?
-  Then allow use to decralre they want to organize files by type of catgeory or do it automatically?
+
+
+Download PostGresSQL. 
+
+User Should give the full path names of the directory to UI. 
+
+Better to first put all info in databse as is, yes.
+
+ Process for Scanning (automatically): 
+ - scan system (scan + update)
+ - Set flags in database to false
+ - In loop:
+ - find path
+ - convert to hash value
+ - compare this hash value in databases. New Record, Update Record, Delete Record.
+1. If the hash values match each other, you make update in database and set the flag of the file to true 
+2. If not, you create new record and set the flag of the file to true
+(adding: size, path name, hash table, cross reference with map of extensions and the document type and add the document type to the database)
+For each file, you have a full path. Based on this path, you create a hash value.
+- Go through all flags that are false and delete them
+Show file scanning detail (aka in progress) :
+"Scanning in progress"
+"Finished Scanning"
+
+
+- ability to run queries and run reports
+
   
